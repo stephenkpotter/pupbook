@@ -9,3 +9,8 @@ cron { 'run-puppet':
   hour    => '*',
   minute  => '*/15',
 }
+
+file { '/tmp/test-puppet-run':
+  ensure => present,
+  mode   => '0755',
+}
